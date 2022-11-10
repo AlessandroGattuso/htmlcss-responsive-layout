@@ -38,6 +38,12 @@ section{
   gap: 20px;
 }
 
+.col{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .col-50{
   width: 100%;
   flex-direction: column;
@@ -260,7 +266,44 @@ header a{
             row-gap: 0px;
           }
         }
+      
+        /* Features section */
+        #features-section .container{
+          flex-direction: column;
+          row-gap: 40px;
+        }
 
+        #features-section .card{
+          row-gap: 10px;
+        }
+
+        #features-section .long-btn{
+          width: auto;
+        }
+
+        /* Features section media */
+        @media all and (min-width: 768px) {
+          
+        }
+        #features-section .row{
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        #features-section .col{
+          width: 45%;
+        }
+
+        @media all and (min-width: 992px) {     
+          #features-section .row{
+            flex-direction: row;
+            justify-content: space-between;
+          }
+  
+          #features-section .col{
+            width: 30%;
+          }
+        }
 /*<---->*/
 
 /* FOOTER*/
@@ -286,6 +329,10 @@ header a{
         font-size: 14px;
       }
 
+      .fs-lg{
+        font-size: 30px;
+      }
+
       .fs-xxl{
         font-size: 80px;
       }
@@ -297,7 +344,7 @@ header a{
 
     /* color */
       .text-gray{
-        color: rgb(93,114,130);
+        color: rgb(131, 131, 131);
       }
 
       .text-blue{
