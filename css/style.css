@@ -4,12 +4,57 @@
   margin: 0;
 }
 
+/* Layout */
+
 html{
   scroll-behavior: smooth;
 }
 
 body{
   font-family: Arial, Helvetica, sans-serif;
+}
+section{
+  padding: 40px 0;
+}
+
+.container{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 992px){
+
+  .container{
+    width: 70%;
+  }
+  
+}
+
+.row{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col-50{
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.col-30{
+  flex-grow: 1;
+  width: 100%;
+}
+
+.card{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
 }
 
 /* HEADER */
@@ -99,7 +144,7 @@ header a{
 
       #big-col-60{
         flex-grow: 2;
-        width: 62% !important;
+        width: 62%;
       }
 
       #big-card{
@@ -172,7 +217,49 @@ header a{
 
       }
 
-    
+    /* Testimonials section */
+      #testimonials-section .container{
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 40px;
+      }
+      
+      #testimonials-section .card{
+        align-items: center;
+        column-gap: 20px;
+      }
+
+      .selfie-container{
+        width: 170px;
+        height: 170px;
+      }
+      
+      #testimonials-section img{
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+      }
+
+      #testimonials-section .text-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+
+      /* Testimonials section media */
+        @media all and (min-width: 768px){
+          #testimonials-section .card{
+            flex-direction: row;
+          }
+
+          #testimonials-section .text-container{
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            row-gap: 0px;
+          }
+        }
 
 /*<---->*/
 
@@ -181,52 +268,6 @@ header a{
 
 
 /* Utils */
-
-/* Layout*/
-
-  section{
-    padding: 30px 0;
-  }
-
-  .container{
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  @media all and (min-width: 992px){
-
-    .container{
-      width: 70%;
-    }
-    
-  }
-
-  .row{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .col-50{
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-  }
-
-  .col-30{
-    flex-grow: 1;
-    width: 100%;
-  }
-
-  .card{
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 25px;
-  }
 
   /* P tag */
     p{
@@ -267,6 +308,10 @@ header a{
         color: white;
       }
 
+      .text-purple{
+        color: rgb(151,146,227);
+      }
+
       .text-lightblack{
         color: rgb(53, 53, 53);
       }
@@ -274,6 +319,10 @@ header a{
     /* text-align */
       .text-center{
         text-align: center;
+      }
+
+      .text-left{
+        text-align: left;
       }
 
   /* Button */
@@ -293,6 +342,11 @@ header a{
       width: 90%;
       letter-spacing: 3px;
     }
+    @media all and (min-width: 768px){
+      .long-btn{
+        max-width: 180px;
+      }
+    }
 
     .blue-btn{
       color: white;
@@ -301,6 +355,11 @@ header a{
 
     .purple-btn{
       background-color: rgb(151,146,227);
+    }
+
+  /* Display */
+    .block{
+      display: block;
     }
 
   /* Cursor */
@@ -318,7 +377,7 @@ header a{
     }
 
     .border-round{
-      border-radius: 100%;
+      border-radius: 80%;
     }
     
   /* Padding */
