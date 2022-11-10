@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -47,7 +51,7 @@ header a{
   text-decoration: none;
 }
 
-@media screen and (min-width: 992px){
+@media all and (min-width: 992px){
   .device-sm-medium{
     display: none;
   }
@@ -87,21 +91,22 @@ header a{
     row-gap: 20px;
   } 
 
-  /* info pros media */
-    @media screen and (min-width: 768px){
-      #info-pros .col{
+  /* Info pros media */
+    @media all and (min-width: 768px){
+      #info-pros .col-30{
         width: 30%;
       }
 
-      #info-pros #big-col{
-        width: 64%;
+      #big-col-60{
+        flex-grow: 2;
+        width: 62% !important;
       }
 
       #big-card{
         flex-direction: row;
       }
 
-      #sub-col{
+      #info-pros #sub-col{
         row-gap: 50px;  
         padding-bottom: 125px;
       }
@@ -116,11 +121,59 @@ header a{
       }
     }
 
-    @media screen and (min-width: 1240px){
-      #sub-col{  
+    @media all and (min-width: 1240px){
+      #info-pros #sub-col{  
         padding-bottom: 100px;
       }
     }
+    
+    /* Planning section */
+    #planning-section .row{
+      column-gap: 10px;
+    }
+
+    #planning-section .col-50{
+      row-gap: 50px;
+    }
+
+    #planning-section img{
+      width: 100%;
+    }
+
+
+    #planning-section .card.bg-white img{
+      max-width: 500px;
+    }
+
+    /* Planning section media */
+      @media all and (min-width: 768px){
+        #planning-section .col-40{
+          row-gap: 80px;
+        }
+
+        #planning-section h1{
+          font-size: 50px;
+        }
+      }
+
+      @media all and (min-width: 992px){
+        #planning-section .row{
+          gap: 0;
+          justify-content: space-between;
+        }
+        
+        #planning-section .row:nth-child(1){
+          align-items: flex-end;
+        }
+
+        #planning-section .col-50{
+          width: 45%;
+        }
+
+      }
+
+    
+
 /*<---->*/
 
 /* FOOTER*/
@@ -141,7 +194,7 @@ header a{
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 992px){
+  @media all and (min-width: 992px){
 
     .container{
       width: 70%;
@@ -156,12 +209,19 @@ header a{
     gap: 20px;
   }
 
-  .col{
+  .col-50{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .col-30{
     flex-grow: 1;
     width: 100%;
   }
 
   .card{
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -181,27 +241,40 @@ header a{
   /* Text */
 
     /* font-size */
-    .fs-sm{
-      font-size: 13px;
-    }
+      .fs-sm{
+        font-size: 14px;
+      }
 
-    .fs-xxl{
-      font-size: 80px;
-    }
+      .fs-xxl{
+        font-size: 80px;
+      }
+
+    /* font-style */
+      .corsive{
+        font-style: italic;
+      }
 
     /* color */
-    .text-gray{
-      color: rgb(93,114,130);
-    }
+      .text-gray{
+        color: rgb(93,114,130);
+      }
 
-    .text-blue{
-      color: rgb(1,132,253);
-    }
+      .text-blue{
+        color: rgb(1,132,253);
+      }
 
-    /* Align */
-    .align-center{
-      text-align: center;
-    }
+      .text-white{
+        color: white;
+      }
+
+      .text-lightblack{
+        color: rgb(53, 53, 53);
+      }
+
+    /* text-align */
+      .text-center{
+        text-align: center;
+      }
 
   /* Button */
     button{
@@ -226,6 +299,10 @@ header a{
       background-color: rgb(1,132,253);
     }
 
+    .purple-btn{
+      background-color: rgb(151,146,227);
+    }
+
   /* Cursor */
     .cursor-pointer{
       cursor: pointer;
@@ -236,6 +313,14 @@ header a{
       border-radius: 15px;
     }
 
+    .border-heavy{
+      border-radius: 30px;
+    }
+
+    .border-round{
+      border-radius: 100%;
+    }
+    
   /* Padding */
   .pb-0{
     padding-bottom: 0px;
@@ -245,3 +330,8 @@ header a{
   .bg-white{
     background-color: white;
   }
+
+  .bg-purple{
+    background-color: rgb(151,146,227);
+  }
+
