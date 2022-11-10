@@ -4,11 +4,13 @@
   margin: 0;
 }
 
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* HEADER */
 
 header{
-  font-size: 20px;
-  color: white;
   width: 100%;
   position: fixed;
   display: flex;
@@ -19,6 +21,7 @@ header{
 
 nav{
   width: 100%;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,7 +32,95 @@ header img{
   width: 80%;
 }
 
+.device-sm-medium{
+  font-size: 20px;
+  display: block;
+}
+
+.device-desktop{
+  display: none;
+}
+
+header a{
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 992px){
+  .device-sm-medium{
+    display: none;
+  }
+  
+  .device-desktop{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+
+}
+/*<---->*/
+
 /* MAIN */
+  main{
+    padding-top: 60px;
+  }
+
+  /* info pros section*/
+  .lightblue-card{
+    background-color: rgb(181,221,255);
+  }
+
+  .lightblue-card h3{
+    color: rgb(1,132,253);
+  }
+
+  .lightblue-card img{
+    width: 100%;
+    max-width: 155px;
+  }
+
+  #sub-col{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  } 
+
+  /* info pros media */
+    @media screen and (min-width: 768px){
+      #info-pros .col{
+        width: 30%;
+      }
+
+      #info-pros #big-col{
+        width: 64%;
+      }
+
+      #big-card{
+        flex-direction: row;
+      }
+
+      #sub-col{
+        row-gap: 50px;  
+        padding-bottom: 125px;
+      }
+
+      .lightblue-card .width-100{
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .lightblue-card img{
+        max-width: none;
+      }
+    }
+
+    @media screen and (min-width: 1240px){
+      #sub-col{  
+        padding-bottom: 100px;
+      }
+    }
 /*<---->*/
 
 /* FOOTER*/
@@ -39,9 +130,14 @@ header img{
 /* Utils */
 
 /* Layout*/
+
+  section{
+    padding: 30px 0;
+  }
+
   .container{
     display: flex;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -53,7 +149,99 @@ header img{
     
   }
 
-/* Cursor */
-  .cursor-pointer{
-    cursor: pointer;
+  .row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .col{
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .card{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  /* P tag */
+    p{
+      line-height: 25px;
+    }
+  
+  /* Width */
+    .width-100{
+      width: 100%;
+    }
+
+  /* Text */
+
+    /* font-size */
+    .fs-sm{
+      font-size: 13px;
+    }
+
+    .fs-xxl{
+      font-size: 80px;
+    }
+
+    /* color */
+    .text-gray{
+      color: rgb(93,114,130);
+    }
+
+    .text-blue{
+      color: rgb(1,132,253);
+    }
+
+    /* Align */
+    .align-center{
+      text-align: center;
+    }
+
+  /* Button */
+    button{
+      cursor: pointer;
+    }
+
+    .btn{
+      border: none;
+      border-radius: 20px;
+      padding: 10px 12px;
+    }
+
+    .long-btn{
+      min-width: 120px;
+      max-width: 250px;
+      width: 90%;
+      letter-spacing: 3px;
+    }
+
+    .blue-btn{
+      color: white;
+      background-color: rgb(1,132,253);
+    }
+
+  /* Cursor */
+    .cursor-pointer{
+      cursor: pointer;
+    }
+
+  /* Border */
+    .border-smooth{
+      border-radius: 15px;
+    }
+
+  /* Padding */
+  .pb-0{
+    padding-bottom: 0px;
+  }
+
+  /* Background-color */
+  .bg-white{
+    background-color: white;
   }
