@@ -1,3 +1,11 @@
+/* Index breakpoints */
+/*
+  Small mobile: 576px;
+  Tablet: 768px;
+  Desktop: 992px;
+  Large Desktop: 1240px;
+*/
+
 *{
   box-sizing: border-box;
   padding: 0;
