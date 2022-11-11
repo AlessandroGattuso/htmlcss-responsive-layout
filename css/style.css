@@ -151,7 +151,7 @@ header a{
 
   .lightblue-card img{
     width: 100%;
-    max-width: 155px;
+    max-width: 200px;
   }
 
   #sub-col{
@@ -190,12 +190,6 @@ header a{
       }
     }
 
-    @media all and (min-width: 1240px){
-      #info-pros #sub-col{  
-        padding-bottom: 100px;
-      }
-    }
-    
     /* Planning section */
     #planning-section .row{
       column-gap: 10px;
