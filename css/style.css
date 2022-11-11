@@ -141,15 +141,16 @@ header a{
   }
 
   /* info pros section*/
-  .lightblue-card{
-    background-color: rgb(181,221,255);
-  }
-
-  .lightblue-card h3{
+  #info-pros h3{
     color: rgb(1,132,253);
   }
 
-  .lightblue-card img{
+  #info-pros .width-100{
+    display: flex;
+    justify-content: center;
+  }
+
+  #info-pros img{
     width: 100%;
     max-width: 200px;
   }
@@ -161,6 +162,12 @@ header a{
   } 
 
   /* Info pros media */
+    @media all and (min-width: 576px){
+      #info-pros .width-100{
+        justify-content: flex-start;
+      }
+    }
+
     @media all and (min-width: 768px){
       #info-pros .col-30{
         width: 30%;
@@ -179,13 +186,12 @@ header a{
         row-gap: 50px;  
         padding-bottom: 125px;
       }
-
-      .lightblue-card .width-100{
-        display: flex;
+      
+      #info-pros .width-100{
         align-items: flex-end;
       }
 
-      .lightblue-card img{
+      #info-pros img{
         max-width: none;
       }
     }
@@ -535,3 +541,6 @@ header a{
     background-color: rgb(151,146,227);
   }
 
+  .bg-lightblue{
+    background-color: rgb(181,221,255);
+  }
