@@ -173,9 +173,9 @@ header a{
         width: 30%;
       }
 
-      #big-col-60{
+      #big-col{
         flex-grow: 2;
-        width: 62%;
+        width: calc(100%/3 * 2 - 35px);
       }
 
       #big-card{
