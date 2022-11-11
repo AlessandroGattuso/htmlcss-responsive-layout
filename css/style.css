@@ -24,6 +24,7 @@ section{
 }
 
 .container-sm{
+  min-width: 150px;
   width: 30% !important;
   align-items: center;
   flex-direction: column;
